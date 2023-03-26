@@ -16,19 +16,69 @@ public class Main {
             System.out.println("0.- Salir");
             System.out.print("Elige una opción: ");
             opcion = entrada.nextInt();
-            entrada.nextLine();
+           // entrada.nextLine();
+           //entrada close();
+           
 
             // TODO Completa el programa con un switch para realizar lo indicado en el menú.
             //      Usa los métodos estáticos que ya hay implementadas y que puedes ver debajo.
 
+            switch (opcion) {
+            
+                /*case 0:
+                System.out.println("has introducido el 0");
+                break;
+            */
+               case 1:
+            int lado;
+            
+            Scanner entrada1 =new Scanner(System.in);
+            System.out.println("Escribe el lado del cuadrado que quieres dibujar...");
+            lado=entrada1.nextInt();
+            dibujarCuadrado (lado);
+            //entrada.close();
+            break;
+
+            case 2:
+            int altura;
+            Scanner entrada2 =new Scanner(System.in);
+            System.out.print("Escribe la altura del Triangulo rectángulo que quieres dibujar...");
+            altura=entrada.nextInt();
+            dibujarTrianguloRectangulo(altura);
+            break;
+
+            
+
+            case 3:
+            int maxX, maxY;
+            Scanner entrada3 =new Scanner(System.in);
+            System.out.print("Escribe mçaximo número puntos x...");
+            maxX=entrada3.nextInt();
+            Scanner entrada4 =new Scanner(System.in);
+            System.out.print("Escribe mçaximo número puntos y...");
+            maxY=entrada4.nextInt();
+            dibujarPuntos(maxX,maxY);
+            
+            break;
+
+            
+
+
+
+
+
+            }
+        
+
+   defaul:
             System.out.print("Intro para continuar...");
             entrada.nextLine();
             System.out.println();
             System.out.println();
-        } while (opcion != 0);
-
+        }while (opcion != 0);
+        
         entrada.close();
-    }
+        }
 
     /**
      * Pide un número entero y devuelve lo que escriba el usuario tras limpiar la entrada.
